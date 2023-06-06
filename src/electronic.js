@@ -69,7 +69,14 @@ plotOptions: {
 const ElectronicPage=()=>{
 
     let Page = "Electronic"
-
+    // const [electricity, setElectricity] = useState({
+    //     year_to: 2022,
+    //     month_to: 6,
+    //     day_to: 6,
+    //     hour_to: 12,
+    //     past_days: 1,
+    //     power_plant_regions: ['北']
+    // })
     const [area, setArea] = useState("竹科");
     const [rawdata, setrawdata] = useState([]);
     const handleDropdownSelect = (item) => {
@@ -99,22 +106,23 @@ const ElectronicPage=()=>{
             power_plant_regions = ["南"]
         }
         let body = {
-            year_to: date.getFullYear(),
-            month_to: date.getMonth() + 1,
-            day_to: date.getDate(),
-            hour_to: date.getHours(),
+            year_to: 2022,
+            month_to: 6,
+            day_to: 6,
+            hour_to: 12,
             past_days: 1,
             power_plant_regions: power_plant_regions
         }
-
-        fetch("http://140.113.194.4:5000/api/electronic", {
+        
+        fetch("http://127.0.0.1:8551/electricity_fetch/", {
             method: 'POST',
             body: JSON.stringify(body),
             headers: new Headers({
                 'Content-Type': 'application/json'
             })
         }).then(res => res.json())
-        .then(res => {          
+        .then(res => {
+            console.log("res",res)         
             let Data = res['data']
             let raw_data = []
             let tmp_data = {}

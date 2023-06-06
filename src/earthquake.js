@@ -118,15 +118,15 @@ const EarthquakePage=()=>{
         }
 
         let body = {
-            year_to: date.getFullYear(),
-            month_to: date.getMonth() + 1,
-            day_to: date.getDate(),
-            hour_to: date.getHours(),
-            past_months: 6,
+            year_to: 2021,
+            month_to: 6,
+            day_to: 5,
+            hour_to: 12,
+            past_months: 1,
             earthquake_regions: earthquake_regions
         }
 
-        fetch("http://140.113.194.4:5000/api/earthquake", {
+        fetch("http://127.0.0.1:8400/earthquake_fetch/", {
             method: 'POST',
             body: JSON.stringify(body),
             headers: new Headers({

@@ -46,15 +46,15 @@ const WaterPage=()=>{
         let PH = 7;
         
         let body = {
-            year_to: date.getFullYear(),
-            month_to: date.getMonth() + 1,
-            day_to: date.getDate(),
-            hour_to: date.getHours(),
-            past_hours: PH,
+            year_to: 2023,
+            month_to: 6,
+            day_to: 2,
+            hour_to: 9,
+            past_hours: 2,
             reservoir_names: reservoir_name
         }
 
-        fetch("http://140.113.194.4:5000/reservoir_fetch/", {
+        fetch("http://127.0.0.1:7000/reservoir_fetch/", {
             method: 'POST',
             body: JSON.stringify(body),
             headers: new Headers({
