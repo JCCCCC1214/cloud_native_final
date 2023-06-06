@@ -118,11 +118,11 @@ const EarthquakePage=()=>{
         }
 
         let body = {
-            year_to: 2021,
+            year_to: 2023,
             month_to: 6,
-            day_to: 5,
+            day_to: 7,
             hour_to: 12,
-            past_months: 1,
+            past_months: 25,
             earthquake_regions: earthquake_regions
         }
 

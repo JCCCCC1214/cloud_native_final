@@ -106,9 +106,9 @@ const ElectronicPage=()=>{
             power_plant_regions = ["南"]
         }
         let body = {
-            year_to: 2022,
-            month_to: 6,
-            day_to: 6,
+            year_to: 2023,
+            month_to: 4,
+            day_to: 30,
             hour_to: 12,
             past_days: 1,
             power_plant_regions: power_plant_regions
