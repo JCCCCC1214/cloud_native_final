@@ -118,11 +118,11 @@ const EarthquakePage=()=>{
         }
 
         let body = {
-            year_to: 2023,
+            year_to: 2021,
             month_to: 6,
-            day_to: 7,
+            day_to: 30,
             hour_to: 12,
-            past_months: 25,
+            past_months: 1,
             earthquake_regions: earthquake_regions
         }
 
@@ -152,6 +152,8 @@ const EarthquakePage=()=>{
                 raw_data.push(tmp_data)
             }
             console.log("r", raw_data)
+            raw_data = raw_data.reverse()
+
             setrawdata(raw_data)
         }) 
     }
@@ -189,7 +191,7 @@ const EarthquakePage=()=>{
                             electronic
                         </NavDropdown.Item>
                         <NavDropdown.Item href="/water">
-                            water
+                            reservoir
                         </NavDropdown.Item>
                         </NavDropdown>
                         

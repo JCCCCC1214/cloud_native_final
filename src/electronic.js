@@ -175,7 +175,7 @@ const ElectronicPage=()=>{
                             electronic
                         </NavDropdown.Item>
                         <NavDropdown.Item href="/water">
-                            water
+                            reservoir
                         </NavDropdown.Item>
                         </NavDropdown>
                         
